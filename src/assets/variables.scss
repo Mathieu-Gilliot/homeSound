@@ -1,0 +1,19 @@
+$darkerGrey : #232020 ;
+$lighterGrey : #3A3535 ;
+$orange: #FF7315 ;
+$white: #F4F4F4;
+$fontColor : linear-gradient(0deg, rgba(244,244,244,1) 20%, rgba(255,115,21,1) 100%);
+$fontSize : 2vh;
+
+%buttonReset{
+        background-color: transparent;
+        outline: none;
+        border: none;
+        cursor: pointer;
+}
+
+%linearFont{
+        background: $fontColor;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+}

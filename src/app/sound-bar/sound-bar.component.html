@@ -1,0 +1,30 @@
+<div class="mainContainer">
+    <div class="trackTitle">
+       <p>{{currentTrack.title}}</p><p>00.00/{{currentTrack.duration}}</p> 
+    </div>
+    <div class="buttonContainer">
+        <button>
+            <img src="assets/images/volume-mute-solid 1.svg" alt="" class="smallerIcons">
+            
+        </button>
+      
+        <button>
+            <img src="assets/images/chevron-right-solid 2.svg" alt="" class="smallerIcons">
+           
+        </button>
+
+        <button (click)="playSwitch(playButton)">
+           <img #playButton src="assets/images/PlayButton.svg" alt="">
+        </button>
+
+         <button>
+            <img src="assets/images/chevron-right-solid 1.svg" alt="" class="smallerIcons">
+        </button>
+        
+        <button>
+            <img src="assets/images/volume-down-solid 1.svg" alt="" class="smallerIcons">
+        </button>
+      
+    </div>
+
+</div>
