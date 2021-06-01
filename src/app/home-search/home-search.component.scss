@@ -1,0 +1,26 @@
+@import "./../../assets/variables.scss";
+
+.mainContainer{
+    padding-top: 50%;
+    label{
+        text-align: center;
+        color: $white;
+        font-size: 20px;
+        border: 1px solid $white;
+        border-radius : 30px;
+        display: inline-block;
+        padding: 6px 12px;
+        cursor: pointer;
+        background-color: $darkerGrey;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img{
+            width: 10%;
+        }
+         input{
+        display: none;
+    }
+    }
+
+}

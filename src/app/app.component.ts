@@ -16,6 +16,8 @@ export class AppComponent {
       this.sectionTitle = "Bienvenue sur HomeSound";
     }else if(value == "tous"){
       this.sectionTitle = "Tous mes morceaux";
+    }else if(value == "search"){
+      this.sectionTitle = "Importez vos morceaux"
     }
   }
 }

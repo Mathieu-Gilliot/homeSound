@@ -1,3 +1,8 @@
 <div class="mainContainer">
-    <input type="file" #files webkitdirectory multiple (change)="getFilesFromFolder($event)"/>
+    <label for="directoryPicker">
+        <img src="assets/images/file-import-solid 1.svg" alt=""> <p>Choisissez le dossier contenant vos morceaux</p>
+
+        <input type="file" id="directoryPicker" name="directoryPicker" #files webkitdirectory multiple (change)="getFilesFromFolder($event)"/>
+    </label>
+
 </div>
