@@ -1,0 +1,14 @@
+<div class="window">
+  <app-nav-bar (actualView)="changeView($event)"></app-nav-bar>
+  <div class="view">
+    <div class="title"><p>{{sectionTitle}}</p></div>
+    <div class="mainScreen" [ngSwitch]="section">
+        <app-home-page *ngSwitchCase="'home'"></app-home-page>
+        <app-home-view *ngSwitchCase="'tous'"></app-home-view>
+        <app-home-search *ngSwitchCase="'search'"></app-home-search>
+    </div>
+    <div class="soundBar" [ngSwitch]="section">
+      <app-sound-bar *ngSwitchCase="section ==='tous'||section ==='home'? section : ''"></app-sound-bar>
+    </div>
+  </div>
+</div>

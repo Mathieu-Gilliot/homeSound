@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./assets/variables.scss";
+@import "./assets/reset.scss";
+
+html{
+    font-size: $fontSize;
+}
+body{
+    background-color: $lighterGrey;
+    width: 100vw;
+    height: 100vh;
+    ::-webkit-scrollbar {
+        width: 1vw;
+        height: 10px;
+       }
+       ::-webkit-scrollbar-thumb {
+        background: linear-gradient(13deg, $lighterGrey 14%,#000000 56%);
+        border-radius: 10px;
+       }
+       ::-webkit-scrollbar-thumb:hover{
+        background: linear-gradient(13deg, $white 14%,$orange 64%);
+       }
+       ::-webkit-scrollbar-track{
+        background: transparent;
+        border-radius: 10px;
+        //box-shadow: inset 7px 10px 12px #f0f0f0;
+       }
+}

@@ -1,0 +1,36 @@
+@import "../../assets/variables.scss";
+
+.mainContainer {
+    background-color: $darkerGrey;
+    border-radius: 30px;
+    width: 50vw;
+    height: 16vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1%;
+    .trackTitle {
+        color: $white;
+        font-size: 2vh;
+        font-family: "Roboto";
+        display: flex;
+        justify-content: space-around;
+        width: 60%;
+        margin-bottom: 1%;
+    }
+    .buttonContainer {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        button{
+            @extend %buttonReset;
+            img{
+                width:6vw;
+            }
+            .smallerIcons{
+                width: 3vw;
+            }
+        }
+    }
+}

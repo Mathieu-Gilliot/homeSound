@@ -1,0 +1,15 @@
+@import "../../assets/variables.scss";
+
+.mainContainer{
+    width: 16vw;
+    height: 100vh;
+    background-color: $darkerGrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+        button{
+            @extend %buttonReset;
+            width: 80%;
+        }
+}

@@ -1,0 +1,33 @@
+@import "../../assets/variables.scss";
+
+.mainContainer {
+    border-radius: 30px;
+    background-color: $darkerGrey;
+    width: 80vw;
+    height: 75vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    
+    .track {
+        background-color: $lighterGrey;
+        border-radius: 30px;
+        border: solid 1px black;
+        height: 4.2vh;
+        width: 65vw;
+        display: flex;
+        justify-content: space-around;
+        margin: 0.5% 0;
+        padding: 1vh 1vw;
+       
+        p {
+            @extend %linearFont;
+            font-size: 1rem;
+            font-weight: bolder;
+            flex: 0.33;
+            padding-left: 3vw;
+        }
+    }
+}
