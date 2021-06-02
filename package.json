@@ -1,23 +1,36 @@
 {
   "name": "home-sound",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "main.js",
   "repository": {
-    "type" : "git",
-    "url" : "https://https://github.com/Mathieu-Gilliot/homeSound.git"
+    "type": "git",
+    "url": "https://https://github.com/Mathieu-Gilliot/homeSound"
   },
   "description": "Your own local music player",
   "author": {
     "name": "Gilliot Mathieu",
     "email": "mathieu.gilliot.pro@gmail.com"
   },
+  "build": {
+    "appId": "HomeSound",
+    "productName": "HomeSound",
+    "files": [
+      "main.js",
+      "dist/HomeSound"
+    ]
+  },
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
+    "ng": "ng serve",
+    "clean": "rimraf dist",
+    "prestart": "npm run build",
+    "start": "electron .",
+    "prebuild": "npm run clean",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "start:electron": "ng build --base-href ./ && electron .",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "prerelease": "npm run build -- --prod",
+    "release": "electron-builder",
     "buildElectron": "electron-builder build  --win --publish never",
     "deploy": "electron-builder build  --win --publish always"
   },

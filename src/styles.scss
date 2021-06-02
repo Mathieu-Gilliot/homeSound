@@ -28,8 +28,10 @@ body{
       #version{
           position: absolute;
           z-index: 99;
-          bottom:0 ;
-          right:0;
+          bottom: 1vh ;
+          right:1vw;
+          width: 5vw;
+          height: 1vh;
           color:$white;
           font-size: 10px;
       } 
