@@ -1,6 +1,6 @@
 <div class="mainContainer">
     <div class="trackTitle">
-       <p>{{currentTrack.title}}</p><p>{{currentTrack.author}}</p><p>{{playedTime.length}}/{{currentTrack.duration}}</p> 
+       <p>{{currentTrack.title}}</p><p>{{currentTrack.author}}</p><p>{{ currentTime$ | async }}/{{currentTrack.duration}}</p> 
     </div>
     <div class="buttonContainer">
         <button>
