@@ -22,3 +22,13 @@ function closeNotification() {
   function restartApp() {
     ipcRenderer.send('restart_app');
   }
+
+const closeButton = document.getElementById("close-button");
+closeButton.addEventListener('click',()=>{
+    closeNotification();
+})
+
+const  restartButton = document.getElementById("restart-button");
+restartButton.addEventListener('click',()=>{
+    restartButton();
+})
