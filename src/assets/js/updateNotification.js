@@ -3,6 +3,7 @@ const { ipcRenderer } = require('electron');
 const notification = document.getElementById('notification');
 const message = document.getElementById('message');
 const restartButton = document.getElementById('restart-button');
+const closeButton = document.getElementById("close-button");
 
 ipcRenderer.on('update_available', () => {
   ipcRenderer.removeAllListeners('update_available');
@@ -23,12 +24,11 @@ function closeNotification() {
     ipcRenderer.send('restart_app');
   }
 
-const closeButton = document.getElementById("close-button");
+
 closeButton.addEventListener('click',()=>{
     closeNotification();
 })
 
-const  restartButton = document.getElementById("restart-button");
 restartButton.addEventListener('click',()=>{
-    restartButton();
+    restartApp();
 })

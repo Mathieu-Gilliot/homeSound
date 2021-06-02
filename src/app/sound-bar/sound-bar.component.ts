@@ -11,9 +11,9 @@ export class SoundBarComponent implements OnInit {
   constructor() { }
 
   currentTrack:ITrack={
-    title:"The Eagle flies alone",
-    author:"Arch Enemy",
-    duration:4.51
+    title:"-------",
+    author:"---",
+    duration:0.00
   }
 
   playSwitch(button:HTMLImageElement){
