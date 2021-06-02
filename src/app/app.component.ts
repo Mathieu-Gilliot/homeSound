@@ -20,4 +20,5 @@ export class AppComponent {
       this.sectionTitle = "Importez vos morceaux"
     }
   }
+  
 }
