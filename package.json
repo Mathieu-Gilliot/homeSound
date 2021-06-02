@@ -1,10 +1,10 @@
 {
   "name": "home-sound",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "main": "main.js",
   "repository": {
     "type": "git",
-    "url": "https://https://github.com/Mathieu-Gilliot/homeSound"
+    "url": "https://github.com/Mathieu-Gilliot/homeSound"
   },
   "description": "Your own local music player",
   "author": {
@@ -17,7 +17,10 @@
     "files": [
       "main.js",
       "dist/HomeSound"
-    ]
+    ],
+    "win":{
+      "icon":"/Google_Play_Music_icon-icons.com_75720.ico"
+    }
   },
   "scripts": {
     "ng": "ng serve",
@@ -32,7 +35,7 @@
     "prerelease": "npm run build -- --prod",
     "release": "electron-builder",
     "buildElectron": "electron-builder build  --win --publish never",
-    "deploy": "electron-builder build  --win --publish always"
+    "deploy": "electron-builder build --config=electron-builder.yml --win --publish always"
   },
   "private": true,
   "dependencies": {

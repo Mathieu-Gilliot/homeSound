@@ -18,7 +18,8 @@ function createWindow() {
       nodeIntegration: true,
       contextIsolation: false
     },
-    icon: "Google_Play_Music_icon-icons.com_75720.ico"
+    icon: "/Google_Play_Music_icon-icons.com_75720.ico",
+    
   })
 
   mainWindow.loadFile(
