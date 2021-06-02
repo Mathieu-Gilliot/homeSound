@@ -1,6 +1,6 @@
 {
   "name": "home-sound",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "main": "main.js",
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
       "dist/HomeSound"
     ],
     "win":{
-      "icon":"/Google_Play_Music_icon-icons.com_75720.ico"
+      "icon":"Google_Play_Music_icon-icons.com_75720.ico"
     }
   },
   "scripts": {
