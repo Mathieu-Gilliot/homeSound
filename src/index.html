@@ -11,7 +11,12 @@
 
 <body>
   <app-root></app-root>
-  <div id="version"></div>
+  <div id="versionLoader">
+    <div id="version"></div>
+    <div id="loader" class="hidden">
+      <img src="assets/images/Spinner.gif" alt="">
+    </div>
+  </div>
   <div id="notification" class="hidden">
     <p id="message"></p>
     <button id="close-button">
@@ -21,6 +26,7 @@
       Redémarrer
     </button>
   </div>
+
   <script src="assets/js/version.js" type="module"> </script>
   <script src="assets/js/updateNotification.js" type="module"> </script>
 </body>
