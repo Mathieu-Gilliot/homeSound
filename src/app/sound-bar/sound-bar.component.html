@@ -1,6 +1,6 @@
 <div class="mainContainer">
     <div class="trackTitle">
-       <p>{{currentTrack.title}}</p><p>00.00/{{currentTrack.duration}}</p> 
+       <p>{{currentTrack.title}}</p><p>{{currentTrack.author}}</p><p>{{playedTime.length}}/{{currentTrack.duration}}</p> 
     </div>
     <div class="buttonContainer">
         <button>
@@ -13,7 +13,7 @@
            
         </button>
 
-        <button (click)="playSwitch(playButton)">
+        <button (click)="playSwitch(playButton); playSong()">
            <img #playButton src="assets/images/PlayButton.svg" alt="">
         </button>
 

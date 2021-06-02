@@ -16,7 +16,8 @@ function createWindow() {
     transparent: true,
     webPreferences: {
       nodeIntegration: true,
-      contextIsolation: false
+      contextIsolation: false,
+      devTools:true
     },
     icon: "/Google_Play_Music_icon-icons.com_75720.ico",
     

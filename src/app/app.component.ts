@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ITrack } from './home-view/Interface/Itrack';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,14 @@ export class AppComponent {
   title = 'HomeSound';
   sectionTitle:String="Bienvenue sur HomeSound";
   section:String="home";
-
+  
+  actualSong: ITrack = {
+    title: "-------",
+    author: "---",
+    duration: 0.00,
+    id: 0,
+    path: '/'
+  }
   changeView(value:string){
     this.section=value;
     if(value == "home"){
@@ -19,6 +27,10 @@ export class AppComponent {
     }else if(value == "search"){
       this.sectionTitle = "Importez vos morceaux"
     }
+  }
+  changeTrack(song:ITrack){
+    this.actualSong = song;
+    console.log(song)
   }
   
 }

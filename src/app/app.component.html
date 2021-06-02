@@ -4,11 +4,11 @@
     <div class="title"><p>{{sectionTitle}}</p></div>
     <div class="mainScreen" [ngSwitch]="section">
         <app-home-page *ngSwitchCase="'home'"></app-home-page>
-        <app-home-view *ngSwitchCase="'tous'"></app-home-view>
+        <app-home-view *ngSwitchCase="'tous'" (currentTrack)=" changeTrack($event)"></app-home-view>
         <app-home-search *ngSwitchCase="'search'"></app-home-search>
     </div>
     <div class="soundBar" [ngSwitch]="section">
-      <app-sound-bar *ngSwitchCase="section ==='tous'||section ==='home'? section : ''"></app-sound-bar>
+      <app-sound-bar *ngSwitchCase="section ==='tous'||section ==='home'? section : ''" [currentTrack]="actualSong"></app-sound-bar>
     </div>
   </div>
 </div>
