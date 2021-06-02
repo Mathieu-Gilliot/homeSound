@@ -4,7 +4,12 @@
   "main": "main.js",
   "repository": {
     "type" : "git",
-    "url" : "https://https://github.com/Mathieu-Gilliot/homeSound"
+    "url" : "https://https://github.com/Mathieu-Gilliot/homeSound.git"
+  },
+  "description": "Your own local music player",
+  "author": {
+    "name": "Gilliot Mathieu",
+    "email": "mathieu.gilliot.pro@gmail.com"
   },
   "scripts": {
     "ng": "ng",
