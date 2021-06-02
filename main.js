@@ -1,8 +1,7 @@
 const { app, BrowserWindow, ipcMain } = require('electron')
 const { autoUpdater } = require('electron-updater');
 
-const url = require("url");
-const path = require("path");
+
 
 let mainWindow
 
