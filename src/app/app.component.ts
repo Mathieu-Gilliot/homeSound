@@ -30,7 +30,6 @@ export class AppComponent {
   }
   changeTrack(song:ITrack){
     this.actualSong = song;
-    console.log(song)
   }
   
 }

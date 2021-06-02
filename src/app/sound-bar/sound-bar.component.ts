@@ -23,36 +23,40 @@ export class SoundBarComponent implements OnInit {
 
   audio = new Audio();
 
-  playSong() {
+  playSong(button: HTMLImageElement) {
     this.audio.setAttribute('src', this.currentTrack.path);
-    this.audio.play();
-    this.audio.addEventListener('timeupdate', () => {
-      // Set song duration time
-      if (!this.durationTime) {
-        this.setSongDuration();
-      }
+    if (this.currentTrack.title != "-------") {
+      this.playSwitch(button);
+      this.audio.addEventListener('timeupdate', () => {
+        // Set song duration time
+        if (!this.durationTime) {
+          this.setSongDuration();
+        }
 
-      // Emit converted audio currenttime in user friendly ex. 01:15
-      const currentMinutes = this.generateMinutes(this.audio.currentTime);
-      const currentSeconds = this.generateSeconds(this.audio.currentTime);
-      this.currentTime$.next(this.generateTimeToDisplay(currentMinutes, currentSeconds));
+        // Emit converted audio currenttime in user friendly ex. 01:15
+        const currentMinutes = this.generateMinutes(this.audio.currentTime);
+        const currentSeconds = this.generateSeconds(this.audio.currentTime);
+        this.currentTime$.next(this.generateTimeToDisplay(currentMinutes, currentSeconds));
 
-      
-    // Emit amount of song played percents
-    const percents = this.generatePercentage(this.audio.currentTime, this.audio.duration);
-    if (!isNaN(percents)) {
-      this.currentProgress$.next(percents);
+
+        // Emit amount of song played percents
+        const percents = this.generatePercentage(this.audio.currentTime, this.audio.duration);
+        if (!isNaN(percents)) {
+          this.currentProgress$.next(percents);
+        }
+      })
     }
-    })
+
   }
 
 
   playSwitch(button: HTMLImageElement) {
     if (button.getAttribute("src") == "assets/images/PlayButton.svg") {
       button.setAttribute("src", "assets/images/PauseButton.svg")
-
+      this.audio.play();
     } else {
       button.setAttribute("src", "assets/images/PlayButton.svg")
+      this.audio.pause();
     }
   }
 

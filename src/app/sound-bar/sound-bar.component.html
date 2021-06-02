@@ -2,6 +2,12 @@
     <div class="trackTitle">
        <p>{{currentTrack.title}}</p><p>{{currentTrack.author}}</p><p>{{ currentTime$ | async }}/{{currentTrack.duration}}</p> 
     </div>
+    <div class="progress">
+        <progress class="progress-bar bg-info" role="progressbar"
+             [ngStyle]="{'width': (currentProgress$ | async) + '%'}"
+             [value]="(currentProgress$ | async) "
+             aria-valuemin="0" aria-valuemax="100"></progress>
+      </div>
     <div class="buttonContainer">
         <button>
             <img src="assets/images/volume-mute-solid 1.svg" alt="" class="smallerIcons">
@@ -13,7 +19,7 @@
            
         </button>
 
-        <button (click)="playSwitch(playButton); playSong()">
+        <button (click)="playSong(playButton)">
            <img #playButton src="assets/images/PlayButton.svg" alt="">
         </button>
 
